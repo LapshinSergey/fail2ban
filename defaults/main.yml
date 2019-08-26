@@ -1,0 +1,13 @@
+---
+fail2ban_packages:
+  - fail2ban
+  - ipset
+fail2ban_configdir: /etc/fail2ban
+fail2ban_loglevel: WARN
+fail2ban_logtarget: /var/log/fail2ban.log
+fail2ban_backend: systemd
+fail2ban_banaction: firewallcmd-ipset
+fail2ban_bantime: 3600
+fail2ban_ignoreip: 127.0.0.1/8
+fail2ban_jails:
+  - sshd
