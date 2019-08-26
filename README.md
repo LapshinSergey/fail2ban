@@ -1,18 +1,12 @@
-Fail2Ban Setup with Ansible
-This Ansible Role installs, configures and updates fail2ban for a linux server. The following tasks will be configured:
+# Fail2Ban SSH role for Ansible (Centos 7)
 
-Install and configure fail2ban
-Requirements
-Currently only tested with CentOS 7
-Ansible 2.4 or higher is required for this Ansible Role
-Role Variables
-Variables are self speaking or documented in:
+![](https://img.shields.io/travis/LapshinSergey/fail2ban?style=for-the-badge) ![](https://img.shields.io/ansible/quality/42967?style=for-the-badge) ![](https://img.shields.io/ansible/role/d/42967?style=for-the-badge) ![](https://img.shields.io/github/repo-size/LapshinSergey/fail2ban?style=for-the-badge)
 
-defaults/main.yml
-Dependencies
-This Ansilbe Role has dependencies to these Ansilbe Roles: *
+Install:
+`ansible-galaxy install lapshinsergey.fail2ban`
 
-Example Playbook
-Example playbooks for this role are located in ´test´ folder:
+Play example:
+`ansible-playbook /root/.ansible/roles/lapshinsergey.fail2ban/tests/test.yml -i /root/.ansible/roles/lapshinsergey.fail2ban/tests/inventory.yml`
 
-tests/playbook_fail2ban.yml
+Update:
+`ansible-galaxy install lapshinsergey.fail2ban --force`
